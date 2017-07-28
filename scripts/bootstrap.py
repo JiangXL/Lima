@@ -101,7 +101,7 @@ def Install_lima_linux():
 	os.system("cmake --build . --target install")
 
 def Install_lima_windows():
-	os.chdir(os.getcwd()+"\build")
+	os.chdir(os.getcwd()+"/build")
 	if platform.machine()=="AMD64":
 		if install_path=="" and install_python_path=="":
 			os.system("cmake -G\"Visual Studio 9 2008 Win64\" "+source_path+" "+cmake_config)
