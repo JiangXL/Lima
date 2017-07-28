@@ -17,7 +17,7 @@ build_script:
       ECHO ***
   - ECHO ----- &&
       install.bat  &&
-      ECHO ----- &&
+      ECHO -----
 
 test_script:
   - ECHO *** &&
