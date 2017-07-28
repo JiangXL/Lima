@@ -104,7 +104,7 @@ def Install_lima_windows():
 	os.chdir(os.getcwd()+"/build")
 	if platform.machine()=="AMD64":
 		if install_path=="" and install_python_path=="":
-			os.system("cmake -G\"Visual Studio 9 2008 Win64\" "+source_path+" "+cmake_config)
+			os.system("cmake -G\"Visual C++ 2008 Express\" "+source_path+" "+cmake_config)
 		else:
 			if install_path!="" and install_python_path=="":
 				os.system("cmake -G\"Visual Studio 9 2008 Win64\" "+source_path+" -DCMAKE_INSTALL_PREFIX="+str(install_path)+" "+cmake_config)
