@@ -139,9 +139,9 @@ if __name__ == '__main__':
 	if available_options==0 and options==0:
 		exit
 	#No git option under windows for obvious reasons.
-	if OS_TYPE=="Linux":
-		if "git" in available_options:
-			GitCloneSubmodule(options)
+	#if OS_TYPE=="Linux":
+	if "git" in available_options:
+		GitCloneSubmodule(options)
 
 	cmake_config = ConfigOptions(options)
 	print cmake_config
