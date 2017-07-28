@@ -15,9 +15,9 @@ build_script:
   - ECHO *** &&
       ECHO Building %COMPILER% %PLATFORM% %CONFIGURATION% &&
       ECHO ***
-  - echo ----- &&
+  - ECHO ----- &&
       install.bat  &&
-      echo ----- &&
+      ECHO ----- &&
 
 test_script:
   - ECHO *** &&
