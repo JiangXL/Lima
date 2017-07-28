@@ -11,13 +11,17 @@ environment:
 
 install:
   - ECHO Installing %COMPILER% %PLATFORM% %CONFIGURATION%
-
+  - git submodule init third-party/Processlib &&
+    git submodule update &&
+    git submodule foreach 'git checkout cmake'
+ - MKDIR build
+ 
 build_script:
   - ECHO *** &&
       ECHO Building %COMPILER% %PLATFORM% %CONFIGURATION% &&
       ECHO ***
-  - ECHO ----- &&
-      install.bat --git &&
+  - cd build
+    cmake -G"Visual Studio 12 2013 Win64" -DLIMACAMERA_ENABLE_SIMULATOR=1
       ECHO -----
 
 test_script:
